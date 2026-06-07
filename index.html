@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhoolPatte — Flowers for Every Function | Delhi NCR</title>
+  <meta name="description" content="Delhi NCR's premium flower shop. Jaimala, Varmala, Phoolon ki Chadar, Flower Jewellery, Bulk Flowers & Function Decoration. Same-day delivery across Delhi, Noida, Gurgaon & more."/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Kalam:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR — rendered by JS -->
+  <nav id="navbar"></nav>
+
+  <!-- APP ROOT — all pages rendered here -->
+  <div id="app"></div>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS — load order matters:
+       1. data.js    → all products, categories, helpers
+       2. state.js   → cart, wishlist, likes, phone
+       3. ui.js      → navbar, phone gate, modal, card HTML
+       4. pages.js   → all page render functions
+       5. router.js  → navigation (must be last)
+  ══════════════════════════════════════════ -->
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/router.js"></script>
+
+  <!-- Boot -->
+  <script>
+    // Global WhatsApp helper used everywhere
+    function openWA(msg) {
+      window.open(waLink(msg), '_blank');
+    }
+    // Start the app
+    Router.init();
+  </script>
+
+</body>
+</html>
